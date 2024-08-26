@@ -14,8 +14,6 @@ This project is a Contact Management system built with Spring Boot. It provides 
   - [Installation](#installation)
   - [Running the Application](#running-the-application)
 - [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Features
 
@@ -480,3 +478,58 @@ Response Body (Failed) :
   "errors" : "contact is not found" 
 }
 ```
+
+## Getting Started
+
+These instructions will help you set up and run the Contact Management API on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- Java Development Kit (JDK) 8 or higher installed
+- Apache Maven installed
+- A MySQL database or any other supported database for storing data
+- An IDE such as IntelliJ IDEA or Eclipse (optional, but recommended)
+
+### Installation
+
+1. Clone the repository from GitHub:
+
+   ```bash
+   git clone https://github.com/11S20025/contact-management.git
+   ```
+   
+2. Navigate to the project directory:
+   
+   ```bash
+   cd contact-management
+   ```
+   
+3. Set up the database by creating a new schema in MySQL and updating the `application.properties` file with your database credentials:
+   
+   ```properties
+   spring.datasource.url=jdbc:mysql://localhost:3306/contact_management
+   spring.datasource.username=your_username
+   spring.datasource.password=your_password
+   spring.jpa.hibernate.ddl-auto=update
+   ```
+
+4. Build the project using Maven:
+
+    ```bash
+   mvn clean install
+   ```
+
+### Running the Application
+
+1. Run the application using Maven:
+   
+    ```bash
+   mvn spring-boot:run
+   ```
+
+2. The API will be accessible at `http://localhost:8080`.
+
+## Usage
+Once the application is running, you can use tools like [Postman](https://www.postman.com/) or [cURL](https://curl.se/) to interact with the API. Refer to the [API Documentation](#api-documentation) section for details on available endpoints and their usage.
